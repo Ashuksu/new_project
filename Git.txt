@@ -1,0 +1,42 @@
+GIT
+
+
+Клонировать новый репозиторий с Git на PC
+git clone https://github.com/Ashuksu/Metro.git
+
+
+поменять (зайти в) директорию
+cd jetro
+
+
+git config --global user.name "ashuksu"
+
+git config --global user.email "ashuksu@gmail.com"
+
+
+
+стянуть изменения из сервака на локаль
+$ git pull origin master
+
+
+
+добавить все файлы и изменения в локал. сохранение git
+$ git add .
+
+
+проверить состояние 
+$ git status
+
+
+создать локал коммит
+git commit -m 'added start project'
+
+
+добавить все изменения и коммит локально
+git commit -am 'update main.ja'
+
+
+отправить на сервак git 
+git push origin master
+
+
