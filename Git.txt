@@ -40,3 +40,8 @@ git commit -am 'update main.ja'
 git push origin master
 
 
+
+
+новая ветка под названием dev или др.
+git checkout -b dev
+
