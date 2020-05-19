@@ -45,3 +45,8 @@ git push origin master
 новая ветка под названием dev или др.
 git checkout -b dev
 
+
+
+переключится между ветками
+git checkout master
+git checkout dev
