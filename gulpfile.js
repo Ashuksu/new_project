@@ -26,7 +26,8 @@ let gulp = require('gulp'),
 
 
 gulp.task('sass', function () {
-   return gulp.src('app/scss/style.scss')
+   // return gulp.src('app/scss/style.scss')
+   return gulp.src('app/scss/**/*.scss')
       // .pipe(sass({ outputStyle: 'expanded' }))
       .pipe(sass({ outputStyle: 'compressed' }))
       .pipe(rename({ suffix: '.min' }))
@@ -40,10 +41,10 @@ gulp.task('sass', function () {
 
 gulp.task('style', function () {
    return gulp.src([
-      'node_modules/slick-carousel/slick/slick-theme.css',
+      // 'node_modules/slick-carousel/slick/slick-theme.css',
+      'node_modules/normalize.css/normalize.css',
       'node_modules/slick-carousel/slick/slick.css',
       'node_modules/magnific-popup/dist/magnific-popup.css',
-      'node_modules/normalize.css/normalize.css'
    ])
       .pipe(concat('libs.min.css'))
       .pipe(cssmin())
@@ -84,7 +85,7 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('watch', function () {
-   gulp.watch('app/scss/style.scss', gulp.parallel('sass'))
+   gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'))
    gulp.watch('app/*.html', gulp.parallel('html'))
    gulp.watch('app/js/*.js', gulp.parallel('js'))
 });
